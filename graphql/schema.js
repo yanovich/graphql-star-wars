@@ -26,38 +26,41 @@ import { getFriends, getHero, getHuman, getDroid } from './resolvers';
 /**
  * Using our shorthand to describe type systems, the type system for our
  * Star Wars example is:
- *
- * enum Episode { NEWHOPE, EMPIRE, JEDI }
- *
- * interface Character {
- *   id: String!
- *   name: String
- *   friends: [Character]
- *   appearsIn: [Episode]
- * }
- *
- * type Human implements Character {
- *   id: String!
- *   name: String
- *   friends: [Character]
- *   appearsIn: [Episode]
- *   homePlanet: String
- * }
- *
- * type Droid implements Character {
- *   id: String!
- *   name: String
- *   friends: [Character]
- *   appearsIn: [Episode]
- *   primaryFunction: String
- * }
- *
- * type Query {
- *   hero(episode: Episode): Character
- *   human(id: String!): Human
- *   droid(id: String!): Droid
- * }
- *
+ */
+
+const text = `
+ enum Episode { NEWHOPE, EMPIRE, JEDI }
+
+ interface Character {
+   id: String!
+   name: String
+   friends: [Character]
+   appearsIn: [Episode]
+ }
+
+ type Human implements Character {
+   id: String!
+   name: String
+   friends: [Character]
+   appearsIn: [Episode]
+   homePlanet: String
+ }
+
+ type Droid implements Character {
+   id: String!
+   name: String
+   friends: [Character]
+   appearsIn: [Episode]
+   primaryFunction: String
+ }
+
+ type Query {
+   hero(episode: Episode): Character
+   human(id: String!): Human
+   droid(id: String!): Droid
+ }
+`;
+/*
  * We begin by setting up our schema.
  */
 
