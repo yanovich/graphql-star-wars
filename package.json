@@ -1,0 +1,33 @@
+{
+  "name": "star-wars-sample",
+  "version": "0.0.0",
+  "description": "Star Wars sample by buildSchema",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanovich/star-wars-sample.git"
+  },
+  "author": "Sergei Ianovich <s@asutp.io>",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/yanovich/star-wars-sample/issues"
+  },
+  "homepage": "https://github.com/yanovich/star-wars-sample#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.8.0",
+    "graphql": "^14.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-flow-strip-types": "^7.4.4",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+  }
+}
