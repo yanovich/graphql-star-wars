@@ -3,7 +3,7 @@
 import { expect } from 'chai';
 import { describe, it } from 'mocha';
 import { schema } from '../graphql/schema';
-import { resolvers } from '../graphql/resolvers';
+import * as resolvers from '../graphql/resolvers';
 import { graphql } from 'graphql';
 
 describe('Star Wars Query Tests', () => {
@@ -210,7 +210,7 @@ describe('Star Wars Query Tests', () => {
         }
       `;
       const params = { someId: '1002' };
-      const result = await graphql(schema, query, null, null, params);
+      const result = await graphql(schema, query, resolvers, null, params);
       expect(result).to.deep.equal({
         data: {
           human: {
@@ -229,7 +229,7 @@ describe('Star Wars Query Tests', () => {
         }
       `;
       const params = { id: 'not a valid id' };
-      const result = await graphql(schema, query, null, null, params);
+      const result = await graphql(schema, query, resolvers, null, params);
       expect(result).to.deep.equal({
         data: {
           human: null,
