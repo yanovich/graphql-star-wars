@@ -1,21 +1,21 @@
 {
   "name": "star-wars-sample",
   "version": "0.0.0",
-  "description": "Star Wars sample by buildSchema",
-  "main": "app.js",
+  "description": "GraphQL Star Wars sample driven by buildSchema",
+  "main": "server.js",
   "scripts": {
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yanovich/star-wars-sample.git"
+    "url": "git+https://github.com/yanovich/graphql-star-wars.git"
   },
   "author": "Sergei Ianovich <s@asutp.io>",
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/yanovich/star-wars-sample/issues"
+    "url": "https://github.com/yanovich/graphql-star-wars/issues"
   },
-  "homepage": "https://github.com/yanovich/star-wars-sample#readme",
+  "homepage": "https://github.com/yanovich/graphql-star-wars#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-graphql": "^0.8.0",
