@@ -168,7 +168,11 @@ function getCharacter(id) {
 /**
  * Allows us to query for a character's friends.
  */
-function getFriends(): Array<Promise<Character>> {
+function getFriends(args): Array<Promise<Character>> {
+  let friends = this.friendsData;
+  if (args.first > 0) {
+    friends = friends.splice(0, args.first);
+  }
   // Notice that GraphQL accepts Arrays of Promises.
   return this.friendsData.map(id => getCharacter(id));
 }

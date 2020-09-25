@@ -33,7 +33,7 @@ enum Episode { NEWHOPE, EMPIRE, JEDI }
 interface Character {
   id: String!
   name: String
-  friends: [Character]
+  friends(first: Int): [Character]
   appearsIn: [Episode]
   secretBackstory: String
 }
@@ -41,7 +41,7 @@ interface Character {
 type Human implements Character {
   id: String!
   name: String
-  friends: [Character]
+  friends(first: Int): [Character]
   appearsIn: [Episode]
   secretBackstory: String
   homePlanet: String
@@ -51,7 +51,7 @@ type Human implements Character {
 type Droid implements Character {
   id: String!
   name: String
-  friends: [Character]
+  friends(first: Int): [Character]
   appearsIn: [Episode]
   secretBackstory: String
   primaryFunction: String
